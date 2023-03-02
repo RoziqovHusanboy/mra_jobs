@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.project.Design.Home
-import com.example.project.Design.Second
+import tj.mra.jobs.Design.Home
+import tj.mra.jobs.Design.Second
 
 @Composable
 fun Nav_Graph() {
@@ -14,10 +14,10 @@ fun Nav_Graph() {
 
     NavHost(navController = navController, startDestination = "home_screen"){
         composable("home_screen"){
-            Home()
+            Home(navController)
         }
         composable("second_screen"){
-            Second()
+            Second(navController)
         }
     }
 }
